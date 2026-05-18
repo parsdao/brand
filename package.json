@@ -1,0 +1,68 @@
+{
+  "name": "@parsdao/brand",
+  "version": "1.0.1",
+  "description": "Pars Network brand identity - logos, colors, design system",
+  "author": "Pars Network",
+  "license": "MIT",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "sideEffects": false,
+  "files": [
+    "dist",
+    "style",
+    "assets",
+    "brand.json"
+  ],
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    },
+    "./brand.json": "./brand.json",
+    "./loader": {
+      "types": "./dist/loader.d.ts",
+      "import": "./dist/loader.mjs",
+      "require": "./dist/loader.js"
+    },
+    "./logo": {
+      "types": "./dist/logo/index.d.ts",
+      "import": "./dist/logo/index.mjs",
+      "require": "./dist/logo/index.js"
+    },
+    "./colors": {
+      "types": "./dist/colors/index.d.ts",
+      "import": "./dist/colors/index.mjs",
+      "require": "./dist/colors/index.js"
+    },
+    "./system": {
+      "types": "./dist/system/index.d.ts",
+      "import": "./dist/system/index.mjs",
+      "require": "./dist/system/index.js"
+    },
+    "./style/*": "./style/*",
+    "./assets/*": "./assets/*"
+  },
+  "peerDependencies": {
+    "react": ">=18.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.0",
+    "react": "^18.0.0",
+    "tsup": "^8.5.1",
+    "typescript": "^5.9.3"
+  },
+  "scripts": {
+    "build": "tsup",
+    "clean": "rm -rf dist"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/parsdao/brand.git"
+  }
+}

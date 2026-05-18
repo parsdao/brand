@@ -1,0 +1,75 @@
+/**
+ * Pars Brand Colors - CSS Variables
+ * Uses unified --ui-* prefix (same across ALL brands)
+ * Accent: #00abff (Persian blue)
+ */
+
+:root, .dark, [data-theme='dark'] {
+  --ui-fg-0: hsl(0 0% 100%);
+  --ui-fg-body: hsl(0 0% 97%);
+  --ui-fg-1: hsl(0 0% 85%);
+  --ui-fg-2: hsl(0 0% 65%);
+  --ui-fg-3: hsl(0 0% 45%);
+  --ui-fg-muted: hsl(0 0% 40%);
+
+  --ui-bg-0: hsl(210 50% 5%);
+  --ui-bg-1: hsl(210 40% 10%);
+  --ui-bg-2: hsl(210 30% 15%);
+  --ui-bg-3: hsl(210 25% 20%);
+  --ui-bg-overlay: hsla(210 50% 5% / 0.9);
+
+  --ui-primary: hsl(200 100% 50%);
+  --ui-primary-hover: hsl(200 100% 40%);
+  --ui-primary-fg: hsl(0 0% 100%);
+
+  --ui-secondary: hsl(200 100% 40%);
+  --ui-secondary-hover: hsl(200 100% 30%);
+  --ui-secondary-fg: hsl(0 0% 100%);
+
+  --ui-accent: hsl(38 92% 50%);
+  --ui-accent-hover: hsl(38 92% 40%);
+  --ui-accent-fg: hsl(0 0% 0%);
+
+  --ui-destructive: hsl(0 84% 60%);
+  --ui-destructive-hover: hsl(0 84% 50%);
+  --ui-destructive-fg: hsl(0 0% 100%);
+
+  --ui-success: hsl(160 84% 39%);
+  --ui-success-hover: hsl(160 84% 32%);
+  --ui-success-fg: hsl(0 0% 100%);
+
+  --ui-warning: hsl(38 92% 50%);
+  --ui-warning-hover: hsl(38 92% 40%);
+  --ui-warning-fg: hsl(0 0% 0%);
+
+  --ui-border: hsl(210 30% 25%);
+  --ui-border-muted: hsl(210 25% 18%);
+  --ui-ring: hsl(200 100% 50%);
+  --ui-radius: 8px;
+
+  --ui-nav: hsl(0 0% 65%);
+  --ui-nav-hover: hsl(0 0% 100%);
+  --ui-nav-current: hsl(200 100% 50%);
+}
+
+.light, [data-theme='light'] {
+  --ui-fg-0: hsl(210 50% 10%);
+  --ui-fg-body: hsl(210 30% 15%);
+  --ui-fg-1: hsl(0 0% 25%);
+  --ui-fg-2: hsl(0 0% 45%);
+  --ui-fg-3: hsl(0 0% 55%);
+  --ui-fg-muted: hsl(0 0% 60%);
+
+  --ui-bg-0: hsl(0 0% 100%);
+  --ui-bg-1: hsl(210 30% 98%);
+  --ui-bg-2: hsl(210 20% 96%);
+  --ui-bg-3: hsl(210 15% 94%);
+  --ui-bg-overlay: hsla(0 0% 0% / 0.5);
+
+  --ui-primary: hsl(200 100% 45%);
+  --ui-primary-hover: hsl(200 100% 35%);
+  --ui-primary-fg: hsl(0 0% 100%);
+
+  --ui-border: hsl(210 20% 90%);
+  --ui-border-muted: hsl(210 15% 94%);
+}
