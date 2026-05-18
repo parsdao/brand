@@ -1,0 +1,80 @@
+<svg viewBox="-120 -120 240 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!--
+    Pars Network Logo - Animated Version
+    Persian 8-Pointed Star with counter-rotating layers
+  -->
+  <style>
+    @keyframes spin-slow { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+    @keyframes spin-reverse { from { transform: rotate(0deg); } to { transform: rotate(-360deg); } }
+    @keyframes breathe { 0%,100% { opacity: 0.6; } 50% { opacity: 1; } }
+    .layer-outer { animation: spin-slow 60s linear infinite; transform-origin: center; }
+    .layer-mid { animation: spin-reverse 45s linear infinite; transform-origin: center; }
+    .layer-inner { animation: spin-slow 30s linear infinite, breathe 4s ease-in-out infinite; transform-origin: center; }
+    .circles { animation: spin-reverse 90s linear infinite; transform-origin: center; }
+  </style>
+  <defs>
+    <linearGradient id="anim-gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f5d06f"/>
+      <stop offset="50%" stop-color="#caa24a"/>
+      <stop offset="100%" stop-color="#f3dc8f"/>
+    </linearGradient>
+    <linearGradient id="anim-blue" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0%" stop-color="#003355"/>
+      <stop offset="50%" stop-color="#00abff"/>
+      <stop offset="100%" stop-color="#66d0ff"/>
+    </linearGradient>
+    <filter id="anim-glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Outer star (slow spin) -->
+  <g class="layer-outer" filter="url(#anim-glow)">
+    <path
+      d="M0,-100 L30,-60 L100,-40 L60,0 L100,40 L30,60 L0,100 L-30,60 L-100,40 L-60,0 L-100,-40 L-30,-60 Z"
+      fill="none"
+      stroke="url(#anim-gold)"
+      stroke-width="4"
+      stroke-linejoin="round"
+    />
+  </g>
+
+  <!-- Mid star (reverse spin) -->
+  <g class="layer-mid">
+    <path
+      d="M0,-70 L22,-42 L70,-28 L42,0 L70,28 L22,42 L0,70 L-22,42 L-70,28 L-42,0 L-70,-28 L-22,-42 Z"
+      fill="url(#anim-blue)"
+      stroke="url(#anim-gold)"
+      stroke-width="3"
+      stroke-linejoin="round"
+    />
+  </g>
+
+  <!-- Circles (slow reverse) -->
+  <g class="circles" fill="none" stroke="#eaf7ff" stroke-width="1.5" opacity="0.5">
+    <circle r="55"/>
+    <circle r="35"/>
+  </g>
+
+  <!-- Inner star (breathing) -->
+  <g class="layer-inner">
+    <path
+      d="M0,-45 L14,-27 L45,-18 L27,0 L45,18 L14,27 L0,45 L-14,27 L-45,18 L-27,0 L-45,-18 L-14,-27 Z"
+      fill="none"
+      stroke="url(#anim-gold)"
+      stroke-width="2"
+      stroke-linejoin="round"
+    />
+  </g>
+
+  <!-- Static center rosette -->
+  <circle r="8" fill="url(#anim-gold)"/>
+  <path
+    d="M0,-20 L6,-6 L20,0 L6,6 L0,20 L-6,6 L-20,0 L-6,-6 Z"
+    fill="#002a47"
+    stroke="url(#anim-gold)"
+    stroke-width="1.5"
+    stroke-linejoin="round"
+  />
+</svg>

@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130 28">
+  <defs>
+    <linearGradient id="pg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f5d06f"/>
+      <stop offset="50%" stop-color="#caa24a"/>
+      <stop offset="100%" stop-color="#f3dc8f"/>
+    </linearGradient>
+    <linearGradient id="pb" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0%" stop-color="#003355"/>
+      <stop offset="50%" stop-color="#00abff"/>
+      <stop offset="100%" stop-color="#66d0ff"/>
+    </linearGradient>
+  </defs>
+  <!-- Star icon scaled bigger -->
+  <g transform="translate(14,14) scale(0.13)">
+    <path d="M0,-100 L30,-60 L100,-40 L60,0 L100,40 L30,60 L0,100 L-30,60 L-100,40 L-60,0 L-100,-40 L-30,-60 Z" fill="none" stroke="url(#pg)" stroke-width="5" stroke-linejoin="round"/>
+    <path d="M0,-70 L22,-42 L70,-28 L42,0 L70,28 L22,42 L0,70 L-22,42 L-70,28 L-42,0 L-70,-28 L-22,-42 Z" fill="url(#pb)" stroke="url(#pg)" stroke-width="4" stroke-linejoin="round"/>
+    <circle r="10" fill="url(#pg)"/>
+  </g>
+  <!-- "ars" text in gold, bigger -->
+  <text x="32" y="19.5" font-family="Geist, Inter, -apple-system, sans-serif"
+    font-size="17" font-weight="500" fill="url(#pg)">ars</text>
+</svg>

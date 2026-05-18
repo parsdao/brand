@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pars Network - Logo Preview</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #05060a;
+      color: #fff;
+      min-height: 100vh;
+      padding: 2rem;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 1rem;
+      font-size: 2.5rem;
+      background: linear-gradient(135deg, #f5d06f 0%, #caa24a 50%, #f3dc8f 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .subtitle {
+      text-align: center;
+      color: rgba(255,255,255,0.5);
+      margin-bottom: 3rem;
+    }
+
+    .section {
+      margin-bottom: 4rem;
+    }
+
+    .section h2 {
+      font-size: 1.25rem;
+      color: rgba(255,255,255,0.7);
+      margin-bottom: 1.5rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2rem;
+    }
+
+    .card {
+      background: rgba(255,255,255,0.05);
+      border-radius: 1rem;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .card.dark {
+      background: #0a0b10;
+    }
+
+    .card.light {
+      background: #f5f5f5;
+    }
+
+    .card img, .card object {
+      max-width: 150px;
+      max-height: 150px;
+      margin-bottom: 1rem;
+    }
+
+    .card.light img {
+      filter: invert(1);
+    }
+
+    .card-label {
+      font-size: 0.875rem;
+      color: rgba(255,255,255,0.6);
+    }
+
+    .card.light .card-label {
+      color: rgba(0,0,0,0.6);
+    }
+
+    .og-preview {
+      background: rgba(255,255,255,0.05);
+      border-radius: 1rem;
+      overflow: hidden;
+    }
+
+    .og-preview img {
+      width: 100%;
+      height: auto;
+    }
+
+    .og-preview object {
+      width: 100%;
+      height: auto;
+    }
+
+    .og-label {
+      padding: 1rem;
+      font-size: 0.875rem;
+      color: rgba(255,255,255,0.6);
+    }
+
+    .animated-logo {
+      animation: spin 60s linear infinite;
+    }
+
+    @keyframes spin {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    .interactive-section {
+      background: radial-gradient(ellipse 1200px 800px at 50% 45%, #001a2e 0%, #05060a 60%, #020308 100%);
+      border-radius: 1rem;
+      padding: 4rem 2rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .interactive-section h3 {
+      font-size: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .interactive-logo {
+      width: 300px;
+      height: 300px;
+      margin: 0 auto;
+      transition: transform 0.3s ease;
+    }
+
+    .interactive-logo:hover {
+      transform: scale(1.05) rotate(5deg);
+    }
+
+    .color-palette {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .color-swatch {
+      width: 80px;
+      height: 80px;
+      border-radius: 0.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 0.5rem;
+      font-size: 0.625rem;
+      font-family: monospace;
+    }
+  </style>
+</head>
+<body>
+  <h1>Pars Network</h1>
+  <p class="subtitle">Persian 8-Pointed Star (Khatam/Shamseh) Logo System</p>
+
+  <!-- Interactive Hero -->
+  <div class="section">
+    <div class="interactive-section">
+      <h3>Interactive Logo</h3>
+      <object class="interactive-logo" type="image/svg+xml" data="docs/assets/pars-logo.svg">
+        Pars Network Logo
+      </object>
+    </div>
+  </div>
+
+  <!-- Logo Variants -->
+  <div class="section">
+    <h2>Logo Variants</h2>
+    <div class="grid">
+      <div class="card dark">
+        <object type="image/svg+xml" data="docs/assets/pars-logo.svg" width="150" height="150">Logo</object>
+        <div class="card-label">Full Color (Dark BG)</div>
+      </div>
+      <div class="card" style="background: #00abff;">
+        <object type="image/svg+xml" data="docs/assets/pars-logo.svg" width="150" height="150">Logo</object>
+        <div class="card-label">Full Color (Blue BG)</div>
+      </div>
+      <div class="card dark">
+        <object type="image/svg+xml" data="docs/assets/pars-logo-mono.svg" width="150" height="150" style="color: #caa24a;">Logo</object>
+        <div class="card-label">Monochrome Gold</div>
+      </div>
+      <div class="card dark">
+        <object type="image/svg+xml" data="docs/assets/pars-logo-white.svg" width="150" height="150">Logo</object>
+        <div class="card-label">White (Dark BG)</div>
+      </div>
+      <div class="card light">
+        <object type="image/svg+xml" data="docs/assets/pars-logo-mono.svg" width="150" height="150" style="color: #003355;">Logo</object>
+        <div class="card-label">Mono Dark (Light BG)</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Wordmark -->
+  <div class="section">
+    <h2>Wordmark</h2>
+    <div class="grid">
+      <div class="card dark" style="grid-column: span 2;">
+        <object type="image/svg+xml" data="docs/assets/pars-wordmark.svg" width="300" height="60">Wordmark</object>
+        <div class="card-label">Wordmark Only</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Logo + Wordmark -->
+  <div class="section">
+    <h2>Logo + Wordmark</h2>
+    <div class="grid">
+      <div class="card dark" style="grid-column: span 2;">
+        <object type="image/svg+xml" data="docs/assets/pars-logo-wordmark.svg" width="400" height="80">Logo + Wordmark</object>
+        <div class="card-label">Horizontal Lockup</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- OpenGraph Images -->
+  <div class="section">
+    <h2>OpenGraph / Social Sharing</h2>
+    <div class="grid">
+      <div class="og-preview" style="grid-column: span 2;">
+        <object type="image/svg+xml" data="docs/assets/og-image.svg" width="100%">OG Image</object>
+        <div class="og-label">1200x630 - Twitter/Facebook/LinkedIn</div>
+      </div>
+      <div class="og-preview">
+        <object type="image/svg+xml" data="docs/assets/og-image-square.svg" width="100%">OG Image Square</object>
+        <div class="og-label">800x800 - Instagram/Discord</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Color Palette -->
+  <div class="section">
+    <h2>Color Palette</h2>
+    <div class="color-palette">
+      <div class="color-swatch" style="background: #f5d06f; color: #000;">
+        Gold Light<br>#f5d06f
+      </div>
+      <div class="color-swatch" style="background: #caa24a; color: #000;">
+        Gold<br>#caa24a
+      </div>
+      <div class="color-swatch" style="background: #f3dc8f; color: #000;">
+        Gold Cream<br>#f3dc8f
+      </div>
+      <div class="color-swatch" style="background: #003355; color: #fff;">
+        Blue Dark<br>#003355
+      </div>
+      <div class="color-swatch" style="background: #00abff; color: #fff;">
+        Blue<br>#00abff
+      </div>
+      <div class="color-swatch" style="background: #66d0ff; color: #000;">
+        Blue Light<br>#66d0ff
+      </div>
+      <div class="color-swatch" style="background: #eaf7ff; color: #000;">
+        Cream<br>#eaf7ff
+      </div>
+      <div class="color-swatch" style="background: #05060a; color: #fff; border: 1px solid rgba(255,255,255,0.1);">
+        BG Dark<br>#05060a
+      </div>
+      <div class="color-swatch" style="background: #001a2e; color: #fff;">
+        BG Blue<br>#001a2e
+      </div>
+    </div>
+  </div>
+
+  <!-- Usage Guidelines -->
+  <div class="section">
+    <h2>Usage Guidelines</h2>
+    <div class="card dark">
+      <ul style="text-align: left; line-height: 2; color: rgba(255,255,255,0.7);">
+        <li><strong>Minimum Size:</strong> 32px for icon, 120px for logo with detail</li>
+        <li><strong>Clear Space:</strong> Maintain 1/4 logo width margin around logo</li>
+        <li><strong>Dark Backgrounds:</strong> Use full color or white variant</li>
+        <li><strong>Light Backgrounds:</strong> Use monochrome dark variant</li>
+        <li><strong>Colored Backgrounds:</strong> Use white variant on blues, mono on yellows</li>
+        <li><strong>Never:</strong> Rotate, distort, add effects, or change colors</li>
+      </ul>
+    </div>
+  </div>
+
+  <script>
+    // Simple parallax effect on logo hover
+    const interactiveLogo = document.querySelector('.interactive-logo');
+    const interactiveSection = document.querySelector('.interactive-section');
+
+    interactiveSection.addEventListener('mousemove', (e) => {
+      const rect = interactiveSection.getBoundingClientRect();
+      const x = (e.clientX - rect.left - rect.width / 2) / (rect.width / 2);
+      const y = (e.clientY - rect.top - rect.height / 2) / (rect.height / 2);
+
+      interactiveLogo.style.transform = `rotateY(${x * 10}deg) rotateX(${-y * 10}deg) scale(1.02)`;
+    });
+
+    interactiveSection.addEventListener('mouseleave', () => {
+      interactiveLogo.style.transform = 'rotateY(0) rotateX(0) scale(1)';
+    });
+  </script>
+</body>
+</html>
